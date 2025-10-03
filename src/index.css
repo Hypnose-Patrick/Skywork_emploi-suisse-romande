@@ -1,0 +1,285 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Charte graphique SaaS Recherche d'Emploi Suisse Romande
+Couleurs inspirées du professionnalisme suisse et de l'innovation
+Toutes les couleurs sont en HSL pour une cohérence parfaite
+*/
+
+@layer base {
+  :root {
+    /* Couleurs de base - Blanc pur et gris anthracite professionnel */
+    --background: 0 0% 100%;
+    --foreground: 215 25% 15%;
+
+    /* Cards avec légère teinte bleue pour la modernité */
+    --card: 210 20% 98%;
+    --card-foreground: 215 25% 15%;
+
+    /* Popovers avec fond légèrement teinté */
+    --popover: 210 20% 98%;
+    --popover-foreground: 215 25% 15%;
+
+    /* Couleur primaire - Bleu professionnel suisse */
+    --primary: 210 100% 45%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 210 100% 65%;
+
+    /* Couleur secondaire - Gris bleuté élégant */
+    --secondary: 210 15% 92%;
+    --secondary-foreground: 215 25% 25%;
+
+    /* Couleurs mutées pour les éléments discrets */
+    --muted: 210 15% 95%;
+    --muted-foreground: 215 15% 45%;
+
+    /* Couleur d'accent - Orange suisse moderne */
+    --accent: 25 95% 55%;
+    --accent-foreground: 0 0% 100%;
+
+    /* Couleurs de succès et d'erreur */
+    --success: 142 76% 36%;
+    --success-foreground: 0 0% 100%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    /* Couleurs d'avertissement */
+    --warning: 45 93% 47%;
+    --warning-foreground: 0 0% 100%;
+
+    /* Bordures et inputs avec teinte bleue subtile */
+    --border: 210 20% 88%;
+    --input: 210 20% 96%;
+    --ring: 210 100% 45%;
+
+    /* Rayon de bordure moderne */
+    --radius: 0.75rem;
+
+    /* Couleurs de la sidebar */
+    --sidebar-background: 215 25% 15%;
+    --sidebar-foreground: 210 15% 85%;
+    --sidebar-primary: 210 100% 45%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 215 20% 20%;
+    --sidebar-accent-foreground: 210 15% 85%;
+    --sidebar-border: 215 20% 25%;
+    --sidebar-ring: 210 100% 45%;
+
+    /* Gradients personnalisés */
+    --gradient-primary: linear-gradient(135deg, hsl(210 100% 45%), hsl(210 100% 65%));
+    --gradient-secondary: linear-gradient(135deg, hsl(210 15% 92%), hsl(210 20% 98%));
+    --gradient-accent: linear-gradient(135deg, hsl(25 95% 55%), hsl(35 95% 65%));
+    --gradient-hero: linear-gradient(135deg, hsl(210 100% 45%) 0%, hsl(25 95% 55%) 100%);
+
+    /* Ombres élégantes */
+    --shadow-sm: 0 1px 2px 0 hsl(210 20% 0% / 0.05);
+    --shadow-md: 0 4px 6px -1px hsl(210 20% 0% / 0.1), 0 2px 4px -1px hsl(210 20% 0% / 0.06);
+    --shadow-lg: 0 10px 15px -3px hsl(210 20% 0% / 0.1), 0 4px 6px -2px hsl(210 20% 0% / 0.05);
+    --shadow-xl: 0 20px 25px -5px hsl(210 20% 0% / 0.1), 0 10px 10px -5px hsl(210 20% 0% / 0.04);
+    --shadow-primary: 0 10px 30px -10px hsl(210 100% 45% / 0.3);
+    --shadow-accent: 0 10px 30px -10px hsl(25 95% 55% / 0.3);
+
+    /* Animations fluides */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  .dark {
+    --background: 215 25% 8%;
+    --foreground: 210 15% 92%;
+
+    --card: 215 25% 10%;
+    --card-foreground: 210 15% 92%;
+
+    --popover: 215 25% 10%;
+    --popover-foreground: 210 15% 92%;
+
+    --primary: 210 100% 55%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 210 100% 75%;
+
+    --secondary: 215 20% 15%;
+    --secondary-foreground: 210 15% 85%;
+
+    --muted: 215 20% 12%;
+    --muted-foreground: 215 15% 65%;
+
+    --accent: 25 95% 60%;
+    --accent-foreground: 0 0% 100%;
+
+    --success: 142 76% 45%;
+    --success-foreground: 0 0% 100%;
+    --destructive: 0 84% 65%;
+    --destructive-foreground: 0 0% 100%;
+
+    --warning: 45 93% 55%;
+    --warning-foreground: 0 0% 100%;
+
+    --border: 215 20% 18%;
+    --input: 215 20% 15%;
+    --ring: 210 100% 55%;
+
+    --sidebar-background: 215 25% 8%;
+    --sidebar-foreground: 210 15% 85%;
+    --sidebar-primary: 210 100% 55%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 215 20% 12%;
+    --sidebar-accent-foreground: 210 15% 85%;
+    --sidebar-border: 215 20% 15%;
+    --sidebar-ring: 210 100% 55%;
+
+    /* Gradients mode sombre */
+    --gradient-primary: linear-gradient(135deg, hsl(210 100% 55%), hsl(210 100% 75%));
+    --gradient-secondary: linear-gradient(135deg, hsl(215 20% 15%), hsl(215 25% 20%));
+    --gradient-accent: linear-gradient(135deg, hsl(25 95% 60%), hsl(35 95% 70%));
+    --gradient-hero: linear-gradient(135deg, hsl(210 100% 55%) 0%, hsl(25 95% 60%) 100%);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+
+  /* Typographie personnalisée */
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-semibold tracking-tight;
+  }
+
+  h1 {
+    @apply text-4xl lg:text-5xl;
+  }
+
+  h2 {
+    @apply text-3xl lg:text-4xl;
+  }
+
+  h3 {
+    @apply text-2xl lg:text-3xl;
+  }
+
+  /* Classes utilitaires personnalisées */
+  .gradient-primary {
+    background: var(--gradient-primary);
+  }
+
+  .gradient-secondary {
+    background: var(--gradient-secondary);
+  }
+
+  .gradient-accent {
+    background: var(--gradient-accent);
+  }
+
+  .gradient-hero {
+    background: var(--gradient-hero);
+  }
+
+  .shadow-primary {
+    box-shadow: var(--shadow-primary);
+  }
+
+  .shadow-accent {
+    box-shadow: var(--shadow-accent);
+  }
+
+  .transition-smooth {
+    transition: var(--transition-smooth);
+  }
+
+  .transition-bounce {
+    transition: var(--transition-bounce);
+  }
+
+  /* Animations personnalisées */
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes slideInRight {
+    from {
+      opacity: 0;
+      transform: translateX(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes pulse-glow {
+    0%, 100% {
+      box-shadow: 0 0 20px hsl(var(--primary) / 0.3);
+    }
+    50% {
+      box-shadow: 0 0 40px hsl(var(--primary) / 0.6);
+    }
+  }
+
+  .animate-fade-in-up {
+    animation: fadeInUp 0.6s ease-out;
+  }
+
+  .animate-slide-in-right {
+    animation: slideInRight 0.6s ease-out;
+  }
+
+  .animate-pulse-glow {
+    animation: pulse-glow 2s ease-in-out infinite;
+  }
+
+  /* Styles pour les composants spécialisés */
+  .kanban-column {
+    @apply bg-card border border-border rounded-lg p-4 min-h-[500px];
+  }
+
+  .kanban-card {
+    @apply bg-background border border-border rounded-lg p-4 mb-3 shadow-md hover:shadow-lg transition-smooth cursor-pointer;
+  }
+
+  .kanban-card:hover {
+    @apply shadow-primary;
+  }
+
+  .stats-card {
+    @apply bg-gradient-to-br from-card to-muted border border-border rounded-xl p-6 shadow-lg hover:shadow-xl transition-smooth;
+  }
+
+  .job-card {
+    @apply bg-card border border-border rounded-lg p-6 hover:shadow-lg transition-smooth hover:border-primary/50;
+  }
+
+  .test-question {
+    @apply bg-card border border-border rounded-lg p-6 mb-4 hover:bg-muted/50 transition-smooth;
+  }
+
+  /* Scrollbar personnalisée */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-muted;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-muted-foreground/30 rounded-full;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-muted-foreground/50;
+  }
+}
